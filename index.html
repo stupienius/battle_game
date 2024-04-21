@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>battle_game</title>
 </head>
 <body>
-    <canvas></canvas>
+    <div class="container">
+        <div class="top">
+            <div class="player_health">
+                <div class="health"></div>
+                <div class="back"></div>
+            </div>
+
+            <div class="timer">10</div>
+
+            <div class="enemy_health">
+                <div class="health"></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <p class="show">tie</p>
+        <canvas></canvas>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
