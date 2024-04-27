@@ -1,3 +1,6 @@
+# *inspired bt https://www.youtube.com/watch?v=vyqbNFMDRGQ*
+
+
 # 2D卷軸遊戲
 
 - 企劃 : 珏 , Tim
