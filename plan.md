@@ -1,4 +1,4 @@
-# *inspired bt https://www.youtube.com/watch?v=vyqbNFMDRGQ*
+# *inspired by https://www.youtube.com/watch?v=vyqbNFMDRGQ*
 
 
 # 2D卷軸遊戲
