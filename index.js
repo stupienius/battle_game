@@ -67,6 +67,7 @@ const keys = {
 decreaseTimer();
 
 function animate(){
+    console.log(player.jumpTime);
     window.requestAnimationFrame(animate);
     c.fillStyle = "black";
     c.fillRect(0, 0, canvas.width, canvas.height);
@@ -132,7 +133,10 @@ window.addEventListener("keydown", (event) =>{
             player.lastkey = "a";
         break;
         case "w":
-            player.velocity.y = -20;
+            if(player.jumpTime < 2){
+                player.velocity.y = -20;
+                player.jumpTime ++;
+            }
         break;
         case " ":
             player.attack();
@@ -147,7 +151,10 @@ window.addEventListener("keydown", (event) =>{
             enemy.lastkey = "ArrowRight";
         break;
         case "ArrowUp":
-            enemy.velocity.y = -20;
+            if(enemy.jumpTime < 2){
+                enemy.velocity.y = -20;
+                enemy.jumpTime ++;
+            }
         break;
         case "ArrowDown":
             enemy.attack();

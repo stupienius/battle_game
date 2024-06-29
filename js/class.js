@@ -36,6 +36,7 @@ class Fighter{
         this.color = color;
         this.isAttacking;
         this.health = 100;
+        this.jumpTime = 0;
     }
 
     draw(){
@@ -63,8 +64,10 @@ class Fighter{
         this.position.y += this.velocity.y;
         this.position.x += this.velocity.x;
 
-        if(this.position.y + this.height + this.velocity.y >= canvas.height - 97){
+        if(this.position.y + this.height + this.velocity.y > canvas.height - 97){
             this.velocity.y = 0;
+            this.position.y = canvas.height - 97 - this.height;
+            this.jumpTime = 0;
         }else this.velocity.y += gravity;
     }
 
