@@ -17,18 +17,19 @@ const background = new Sprite({
 });
 
 const player = new Fighter({
-    position:{
+    position: {
         x: 0,
         y: 0
     },
-    velocity:{
+    velocity: {
         x: 0,
         y: 0
     },
-    offset:{
-        x:0,
-        y:0
-    }
+    offset: {
+        x: 0,
+        y: 0
+    },
+    imageSrc: './img/kenji/idle.png'  // Update this path
 });
 
 
