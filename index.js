@@ -6,7 +6,7 @@ canvas.height = 576;
 
 c.fillRect(0 ,0 , canvas.width, canvas.height);
 
-const gravity = 0.7;
+const gravity = 0.85;
 
 const background = new Sprite({
     position:{
@@ -16,20 +16,29 @@ const background = new Sprite({
     imageSrc:"./img/background.png"
 });
 
+const shop = new Sprite({
+    position:{
+        x:630,
+        y:128
+    },
+    imageSrc:"./img/shop.png",
+    scale: 2.75,
+    framesMax: 6
+});
+
 const player = new Fighter({
-    position: {
+    position:{
         x: 0,
         y: 0
     },
-    velocity: {
+    velocity:{
         x: 0,
         y: 0
     },
-    offset: {
-        x: 0,
-        y: 0
-    },
-    imageSrc: './img/kenji/idle.png'  // Update this path
+    offset:{
+        x:0,
+        y:0
+    }
 });
 
 
@@ -73,6 +82,7 @@ function animate(){
     c.fillStyle = "black";
     c.fillRect(0, 0, canvas.width, canvas.height);
     background.update();
+    shop.update();
     player.update();
     enemy.update();
 
